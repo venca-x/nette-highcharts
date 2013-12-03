@@ -3,6 +3,31 @@ Configuration
 highcharts generator for Nette 2.1
 
 
+	"require-dev": {
+		"venca-x/highcharts": "@dev"
+	}
+
+Installation
+------------
+
+ 1. Add the bundle to your dependencies:
+
+        // composer.json
+
+        {
+           // ...
+           "require": {
+               // ...
+               "venca-x/highcharts": "@dev"
+           }
+        }
+
+ 2. Use Composer to download and install the bundle:
+
+        composer.phar update
+        
+
+
 Usage Sample
 -------------
 Presenter
