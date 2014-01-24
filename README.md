@@ -74,7 +74,7 @@ Presenter
         $this->template->pieChart = $highcharts->render( "pie-chart" );
         ////////////////////////////////////////////////////////////////////////  
 ```
-
+```php
   {block content}  
     basic-column<br/>
     <div id="basic-column" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br/>
@@ -114,3 +114,4 @@ Presenter
           });
       </script>
   {/#} 
+```
