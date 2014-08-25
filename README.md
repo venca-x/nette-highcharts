@@ -73,6 +73,12 @@ Presenter
         $highcharts = new \vencax\Highchart\Highchart( $pieChart->sample() );
         $this->template->pieChart = $highcharts->render( "pie-chart" );
         ////////////////////////////////////////////////////////////////////////  
+		
+        ////////////////////////////////////////////////////////////////////////
+        $columnRotatedLabelsChart = new \vencax\Highchart\samples\ColumnRotatedLabels();
+        $highcharts = new \vencax\Highchart\Highchart( $columnRotatedLabelsChart->sample() );
+        $this->template->columnRotatedLabelsChart = $highcharts->render( "column-rotated-labels" );
+        ////////////////////////////////////////////////////////////////////////  		
 ```
 ```php
   {block content}  
@@ -89,7 +95,9 @@ Presenter
     basic-line<br/>
     <div id="basic-line" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br/>
     pie-chart<br/>
-    <div id="pie-chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <div id="pie-chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>	
+	Column Rotated Labels<br/>
+    <div id="column-rotated-labels" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
   {/block}
 
   {#scripts}
@@ -98,19 +106,21 @@ Presenter
       <script type="text/javascript">
           $(function () {
               
-              {!$basicColumn}
+              {$basicColumn|noescape}
                       
-              {!$basicBar}
+              {$basicBar|noescape}
                       
-              {!$stackedBar}
+              {$stackedBar|noescape}
                                                       
-              {!$tempChart}
+              {$tempChart|noescape}
               
-              {!$trafficChart}
+              {$trafficChart|noescape}
                       
-              {!$basicLine}
+              {$basicLine|noescape}
                       
-              {!$pieChart}
+              {$pieChart|noescape}
+			  
+              {$columnRotatedLabelsChart|noescape}
           });
       </script>
   {/#} 
