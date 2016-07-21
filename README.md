@@ -1,31 +1,47 @@
+Nette-highcharts
+===============
+[![Build Status](https://travis-ci.org/venca-x/nette-highcharts.svg)](https://travis-ci.org/venca-x/nette-highcharts) 
+[![Latest Stable Version](https://poser.pugx.org/venca-x/nette-highcharts/v/stable.svg)](https://packagist.org/packages/venca-x/nette-highcharts) 
+[![Total Downloads](https://poser.pugx.org/venca-x/nette-highcharts/downloads.svg)](https://packagist.org/packages/venca-x/nette-highcharts) 
+[![Latest Unstable Version](https://poser.pugx.org/venca-x/nette-highcharts/v/unstable.svg)](https://packagist.org/packages/venca-x/nette-highcharts) 
+[![License](https://poser.pugx.org/venca-x/nette-highcharts/license.svg)](https://packagist.org/packages/venca-x/nette-highcharts)
+
+Simple highcharts graph generator for Nette
+
 Configuration
 -------------
-highcharts generator for Nette 2.1
-
-
+```
 	"require-dev": {
 		"venca-x/highcharts": "@dev"
 	}
+```
 
 Installation
 ------------
 
- 1. Add the bundle to your dependencies:
+ 1. Add the bundle to your dependencies.
 
-        // composer.json
+install with composer:
+```
+    composer require venca-x/nette-highcharts
+```
 
-        {
-           // ...
-           "require": {
-               // ...
-               "venca-x/highcharts": "@dev"
-           }
-        }
+or add line to composer.json:
+```
+// composer.json
+{
+   // ...
+   "require": {
+       // ...
+       "venca-x/highcharts": "@dev"
+   }
+}
+```
 
  2. Use Composer to download and install the bundle:
-
+```
         composer.phar update
-        
+```
 
 
 Usage Sample
@@ -80,7 +96,7 @@ Presenter
         $this->template->columnRotatedLabelsChart = $highcharts->render( "column-rotated-labels" );
         ////////////////////////////////////////////////////////////////////////  		
 ```
-```php
+```html
   {block content}  
     basic-column<br/>
     <div id="basic-column" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br/>
