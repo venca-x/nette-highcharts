@@ -23,7 +23,7 @@ Installation
 
 install with composer:
 ```
-    composer require venca-x/nette-highcharts
+    composer require venca-x/nette-highcharts:dev-master
 ```
 
 or add line to composer.json:
