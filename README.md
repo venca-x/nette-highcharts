@@ -12,17 +12,17 @@ Installation
 ------------
 install with composer:
 ```
-composer require venca-x/highcharts:dev-master
+composer require venca-x/nette-highcharts:dev-master
 ```
 
 For Nette 3.0 use (minimum version php 7.1):
 ```
-composer require venca-x/highcharts:dev-master
+composer require venca-x/nette-highcharts:dev-master
 ```
 
 For below Nette 3.0 use:
 ```
-composer require venca-x/highcharts:dev-master#v1.0.0
+composer require venca-x/nette-highcharts:dev-master#v1.0.0
 ```
 
 Usage Sample
