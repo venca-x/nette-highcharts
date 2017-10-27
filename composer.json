@@ -1,18 +1,19 @@
 {
-    "name": "venca-x/highcharts",
-    "description": "Nette addon. Generator Highcharts chart",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "vEnCa-X",
-            "email": "venca-x@seznam.cz"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require-dev": {
-        "nette/tester": "@dev"
-    },
-    "autoload": {
-        "classmap": ["src/"]
+  "name": "venca-x/highcharts",
+  "description": "Nette addon. Generator Highcharts chart",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "vEnCa-X",
+      "email": "venca-x@seznam.cz"
     }
+  ],
+  "require-dev": {
+    "nette/tester": "^2.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  }
 }
