@@ -1,10 +1,11 @@
 Nette-highcharts
 ===============
-[![Build Status](https://travis-ci.org/venca-x/nette-highcharts.svg)](https://travis-ci.org/venca-x/nette-highcharts) 
-[![Latest Stable Version](https://poser.pugx.org/venca-x/nette-highcharts/v/stable.svg)](https://packagist.org/packages/venca-x/nette-highcharts) 
-[![Total Downloads](https://poser.pugx.org/venca-x/nette-highcharts/downloads.svg)](https://packagist.org/packages/venca-x/nette-highcharts) 
-[![Latest Unstable Version](https://poser.pugx.org/venca-x/nette-highcharts/v/unstable.svg)](https://packagist.org/packages/venca-x/nette-highcharts) 
-[![License](https://poser.pugx.org/venca-x/nette-highcharts/license.svg)](https://packagist.org/packages/venca-x/nette-highcharts)
+[![Build Status](https://travis-ci.org/venca-x/nette-highcharts.svg)](https://travis-ci.org/venca-x/nette-highcharts)
+[![Coverage Status](https://coveralls.io/repos/github/venca-x/nette-highcharts/badge.svg?branch=master)](https://coveralls.io/github/venca-x/nette-highcharts?branch=master) 
+[![Latest Stable Version](https://poser.pugx.org/venca-x/nette-highcharts/v/stable)](https://packagist.org/packages/venca-x/nette-highcharts)
+[![Latest Unstable Version](https://poser.pugx.org/venca-x/nette-highcharts/v/unstable)](https://packagist.org/packages/venca-x/nette-highcharts) 
+[![Total Downloads](https://poser.pugx.org/venca-x/nette-highcharts/downloads)](https://packagist.org/packages/venca-x/nette-highcharts)
+[![License](https://poser.pugx.org/venca-x/nette-highcharts/license)](https://packagist.org/packages/venca-x/nette-highcharts)
 
 Simple highcharts graph generator for Nette
 
