@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace VencaX\Highchart;
 
@@ -11,52 +12,42 @@ use Exception;
  */
 class Highchart extends HighchartData
 {
+	public function __construct($sampleHighchartArray = null)
+	{
+		if ($sampleHighchartArray != null) {
+			$this->data = $sampleHighchartArray;
+		}
+	}
 
-    public function __construct( $sampleHighchartArray = NULL )
-    {
-        if ( $sampleHighchartArray != NULL )
-        {
-            $this->data = $sampleHighchartArray;
-        }
-    }
 
-    public function render( $renderToID )
-    {
-        //convert Highcharts to array
-        $highcahrtArray = $this->recurtiveItemToArray( $this->data );
+	public function render($renderToID)
+	{
+		//convert Highcharts to array
+		$highcahrtArray = $this->recurtiveItemToArray($this->data);
 
-        //return JS for highchart
-        return "$('#{$renderToID}').highcharts(" . json_encode( $highcahrtArray ) . ");";
-    }
+		//return JS for highchart
+		return "$('#{$renderToID}').highcharts(" . json_encode($highcahrtArray) . ');';
+	}
 
-    protected function recurtiveItemToArray( $itemHighchartDatas )
-    {
-        $returnArray = array();
 
-        foreach ( $itemHighchartDatas as $key => $itemHighchartData )
-        {
+	protected function recurtiveItemToArray($itemHighchartDatas)
+	{
+		$returnArray = [];
 
-            if ( is_object( $itemHighchartData ) && ( get_class( $itemHighchartData ) == "VencaX\Highchart\HighchartData" ) )
-            {
-                //is object HighchartData
-                $returnArray[$key] = $this->recurtiveItemToArray( $itemHighchartData->data );
-            }
-            else if ( is_array( $itemHighchartData ) )
-            {
-                $returnArray[$key] = $this->recurtiveItemToArray( $itemHighchartData );
-            }
-            else if ( is_string( $itemHighchartData ) || is_numeric( $itemHighchartData ) || is_bool( $itemHighchartData ) || is_null( $itemHighchartData ) )
-            {
-                //is string
-                $returnArray[$key] = $itemHighchartData;
-            }
-            else
-            {
-                throw new Exception( "Key {$key} isn't object type HighchartData or string" );
-            }
-        }
+		foreach ($itemHighchartDatas as $key => $itemHighchartData) {
+			if (is_object($itemHighchartData) && (get_class($itemHighchartData) == "VencaX\Highchart\HighchartData")) {
+				//is object HighchartData
+				$returnArray[$key] = $this->recurtiveItemToArray($itemHighchartData->data);
+			} elseif (is_array($itemHighchartData)) {
+				$returnArray[$key] = $this->recurtiveItemToArray($itemHighchartData);
+			} elseif (is_string($itemHighchartData) || is_numeric($itemHighchartData) || is_bool($itemHighchartData) || $itemHighchartData === null) {
+				//is string
+				$returnArray[$key] = $itemHighchartData;
+			} else {
+				throw new Exception("Key {$key} isn't object type HighchartData or string");
+			}
+		}
 
-        return $returnArray;
-    }
-
+		return $returnArray;
+	}
 }

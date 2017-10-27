@@ -10,86 +10,75 @@ Simple highcharts graph generator for Nette
 
 Installation
 ------------
-
- 1. Add the bundle to your dependencies.
-
 install with composer:
 ```
-    composer require venca-x/highcharts:dev-master
+composer require venca-x/highcharts:dev-master
 ```
 
-or add line to composer.json:
+For Nette 3.0 use (minimum version php 7.1):
 ```
-// composer.json
-{
-   // ...
-   "require": {
-       // ...
-       "venca-x/highcharts": "@dev"
-   }
-}
+composer require venca-x/highcharts:dev-master
 ```
 
- 2. Use Composer to download and install the bundle:
+For below Nette 3.0 use:
 ```
-        composer.phar update
+composer require venca-x/highcharts:dev-master#v1.0.0
 ```
-
 
 Usage Sample
 -------------
 Presenter
 ```php
-        ////////////////////////////////////////////////////////////////////////     
-        $basicColumn = new VencaX\Highchart\samples\BasicColumn();        
-        $highcharts = new VencaX\Highchart\Highchart( $basicColumn->sample() );
-        $this->template->basicColumn = $highcharts->render( "basic-column" );
-        ////////////////////////////////////////////////////////////////////////  
+////////////////////////////////////////////////////////////////////////     
+$basicColumn = new VencaX\Highchart\samples\BasicColumn();        
+$highcharts = new VencaX\Highchart\Highchart( $basicColumn->sample() );
+$this->template->basicColumn = $highcharts->render( "basic-column" );
+////////////////////////////////////////////////////////////////////////  
 
-        ////////////////////////////////////////////////////////////////////////
-        $basicBar = new VencaX\Highchart\samples\BasicBar();
-        $highcharts = new VencaX\Highchart\Highchart( $basicBar->sample() );
-        $this->template->basicBar = $highcharts->render( "basic-bar" );
-        ////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+$basicBar = new VencaX\Highchart\samples\BasicBar();
+$highcharts = new VencaX\Highchart\Highchart( $basicBar->sample() );
+$this->template->basicBar = $highcharts->render( "basic-bar" );
+////////////////////////////////////////////////////////////////////////
 
-        ////////////////////////////////////////////////////////////////////////
-        $stackedBar = new VencaX\Highchart\samples\StackedBar();
-        $highcharts = new VencaX\Highchart\Highchart( $stackedBar->sample() );
-        $this->template->stackedBar = $highcharts->render( "stacked-bar" );
-        ////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+$stackedBar = new VencaX\Highchart\samples\StackedBar();
+$highcharts = new VencaX\Highchart\Highchart( $stackedBar->sample() );
+$this->template->stackedBar = $highcharts->render( "stacked-bar" );
+////////////////////////////////////////////////////////////////////////
 
-        ////////////////////////////////////////////////////////////////////////
-        $tempChart = new VencaX\Highchart\samples\TempChart();
-        $highcharts = new VencaX\Highchart\Highchart( $tempChart->sample() );
-        $this->template->tempChart = $highcharts->render( "temp-chart" );
-        ////////////////////////////////////////////////////////////////////////        
+////////////////////////////////////////////////////////////////////////
+$tempChart = new VencaX\Highchart\samples\TempChart();
+$highcharts = new VencaX\Highchart\Highchart( $tempChart->sample() );
+$this->template->tempChart = $highcharts->render( "temp-chart" );
+////////////////////////////////////////////////////////////////////////        
 
-        ////////////////////////////////////////////////////////////////////////
-        $trafficChart = new VencaX\Highchart\samples\TrafficChart();
-        $highcharts = new VencaX\Highchart\Highchart( $trafficChart->sample() );
-        $this->template->trafficChart = $highcharts->render( "traffic-chart" );
-        ////////////////////////////////////////////////////////////////////////          
+////////////////////////////////////////////////////////////////////////
+$trafficChart = new VencaX\Highchart\samples\TrafficChart();
+$highcharts = new VencaX\Highchart\Highchart( $trafficChart->sample() );
+$this->template->trafficChart = $highcharts->render( "traffic-chart" );
+////////////////////////////////////////////////////////////////////////          
 
-        ////////////////////////////////////////////////////////////////////////
-        $basicLine = new VencaX\Highchart\samples\BasicLine();
-        $highcharts = new VencaX\Highchart\Highchart( $basicLine->sample() );
-        $this->template->basicLine = $highcharts->render( "basic-line" );
-        ////////////////////////////////////////////////////////////////////////          
+////////////////////////////////////////////////////////////////////////
+$basicLine = new VencaX\Highchart\samples\BasicLine();
+$highcharts = new VencaX\Highchart\Highchart( $basicLine->sample() );
+$this->template->basicLine = $highcharts->render( "basic-line" );
+////////////////////////////////////////////////////////////////////////          
 
-        ////////////////////////////////////////////////////////////////////////
-        $pieChart = new VencaX\Highchart\samples\PieChart();
-        $highcharts = new VencaX\Highchart\Highchart( $pieChart->sample() );
-        $this->template->pieChart = $highcharts->render( "pie-chart" );
-        ////////////////////////////////////////////////////////////////////////  
-		
-        ////////////////////////////////////////////////////////////////////////
-        $columnRotatedLabelsChart = new VencaX\Highchart\samples\ColumnRotatedLabels();
-        $highcharts = new VencaX\Highchart\Highchart( $columnRotatedLabelsChart->sample() );
-        $this->template->columnRotatedLabelsChart = $highcharts->render( "column-rotated-labels" );
-        ////////////////////////////////////////////////////////////////////////  		
+////////////////////////////////////////////////////////////////////////
+$pieChart = new VencaX\Highchart\samples\PieChart();
+$highcharts = new VencaX\Highchart\Highchart( $pieChart->sample() );
+$this->template->pieChart = $highcharts->render( "pie-chart" );
+////////////////////////////////////////////////////////////////////////  
+
+////////////////////////////////////////////////////////////////////////
+$columnRotatedLabelsChart = new VencaX\Highchart\samples\ColumnRotatedLabels();
+$highcharts = new VencaX\Highchart\Highchart( $columnRotatedLabelsChart->sample() );
+$this->template->columnRotatedLabelsChart = $highcharts->render( "column-rotated-labels" );
+////////////////////////////////////////////////////////////////////////  		
 ```
 ```html
-  {block content}  
+{block content}  
     basic-column<br/>
     <div id="basic-column" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br/>
     basic-bar<br/>
@@ -104,32 +93,24 @@ Presenter
     <div id="basic-line" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br/>
     pie-chart<br/>
     <div id="pie-chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>	
-	Column Rotated Labels<br/>
+    Column Rotated Labels<br/>
     <div id="column-rotated-labels" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-  {/block}
+{/block}
 
-  {#scripts}
-      <script src="{$basePath}/js/highcharts.js"></script>
-      <script src="{$basePath}/js/highcharts-more.js"></script>
-      <script type="text/javascript">
-          $(function () {
-              
-              {$basicColumn|noescape}
-                      
-              {$basicBar|noescape}
-                      
-              {$stackedBar|noescape}
-                                                      
-              {$tempChart|noescape}
-              
-              {$trafficChart|noescape}
-                      
-              {$basicLine|noescape}
-                      
-              {$pieChart|noescape}
-			  
-              {$columnRotatedLabelsChart|noescape}
-          });
-      </script>
-  {/#} 
+{#scripts}
+    <script src="{$basePath}/js/highcharts.js"></script>
+    <script src="{$basePath}/js/highcharts-more.js"></script>
+    <script type="text/javascript">
+        $(function () {          
+            {$basicColumn|noescape}                  
+            {$basicBar|noescape}
+            {$stackedBar|noescape}                  
+            {$tempChart|noescape}
+            {$trafficChart|noescape}
+            {$basicLine|noescape}
+            {$pieChart|noescape}
+            {$columnRotatedLabelsChart|noescape}
+        });
+    </script>
+{/#} 
 ```

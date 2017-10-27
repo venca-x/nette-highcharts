@@ -1,0 +1,25 @@
+{
+  "name": "nette-highcharts",
+  "version": "1.0.0",
+  "description": "Nette-highcharts\r ===============\r [![Build Status](https://travis-ci.org/venca-x/nette-highcharts.svg)](https://travis-ci.org/venca-x/nette-highcharts) \r [![Latest Stable Version](https://poser.pugx.org/venca-x/nette-highcharts/v/stable.svg)](https://packagist.org/packages/venca-x/nette-highcharts) \r [![Total Downloads](https://poser.pugx.org/venca-x/nette-highcharts/downloads.svg)](https://packagist.org/packages/venca-x/nette-highcharts) \r [![Latest Unstable Version](https://poser.pugx.org/venca-x/nette-highcharts/v/unstable.svg)](https://packagist.org/packages/venca-x/nette-highcharts) \r [![License](https://poser.pugx.org/venca-x/nette-highcharts/license.svg)](https://packagist.org/packages/venca-x/nette-highcharts)",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venca-x/nette-highcharts.git"
+  },
+  "author": "vEnCa-X",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/venca-x/nette-highcharts/issues"
+  },
+  "homepage": "https://github.com/venca-x/nette-highcharts#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-shell": "^2.1.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
