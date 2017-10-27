@@ -1,6 +1,8 @@
 <?php
 
-namespace vencax\Highchart;
+namespace VencaX\Highchart;
+
+use VencaX;
 
 class HighchartData
 {

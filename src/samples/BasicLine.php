@@ -1,13 +1,15 @@
 <?php
 
-namespace vencax\Highchart\samples;
+namespace VencaX\Highchart\samples;
+
+use VencaX;
 
 class BasicLine
 {
 
     public static function sample()
     {
-        $highcharts = new \vencax\Highchart\Highchart();
+        $highcharts = new VencaX\Highchart\Highchart();
         
         $highcharts->chart->type = "spline"; //kruzitkove zaobleno
         $highcharts->title->text = "Graf normal";

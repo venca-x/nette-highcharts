@@ -1,13 +1,15 @@
 <?php
 
-namespace vencax\Highchart\samples;
+namespace VencaX\Highchart\samples;
+
+use VencaX;
 
 class BasicColumn
 {
 
     public static function sample()
     {
-        $highcharts = new \vencax\Highchart\Highchart();
+        $highcharts = new VencaX\Highchart\Highchart();
         $highcharts->chart->type = "column"; //sloupcovy graf
         $highcharts->title->text = "Bar chart-bar-vertically";
         $highcharts->subtitle->text = "Popis";

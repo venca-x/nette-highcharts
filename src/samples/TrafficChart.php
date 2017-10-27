@@ -1,13 +1,15 @@
 <?php
 
-namespace vencax\Highchart\samples;
+namespace VencaX\Highchart\samples;
+
+use VencaX;
 
 class TrafficChart
 {
 
     public static function sample()
     {
-        $highcharts = new \vencax\Highchart\Highchart();
+        $highcharts = new VencaX\Highchart\Highchart();
         
         $highcharts->title->text = "Graf návštěvnosti a zobrazení stránek";
         $highcharts->subtitle->text = "Za posledních 30 dní";

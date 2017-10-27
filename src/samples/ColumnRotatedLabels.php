@@ -1,13 +1,15 @@
 <?php
 
-namespace vencax\Highchart\samples;
+namespace VencaX\Highchart\samples;
+
+use VencaX;
 
 class ColumnRotatedLabels
 {
 
     public static function sample()
     {
-        $highcharts = new \vencax\Highchart\Highchart();
+        $highcharts = new VencaX\Highchart\Highchart();
         
         $highcharts->chart->type = "spline"; //kruzitkove zaobleno
         $highcharts->title->text = "Graf normal";
@@ -18,7 +20,7 @@ class ColumnRotatedLabels
         $highcharts->yAxis->title->text = "Temperature";
         $highcharts->yAxis->plotLines = array( array( "value" => 0, "width" => 1, "color" => "#808080" ) );
 
-        $highcharts->tooltip->valueSuffix = "°C";
+        $highcharts->tooltip->valueSuffix = "Â°C";
 
         $highcharts->legend = array( "layout" => "vertical", "align" => "right", "verticalAlign" => "middle", "borderWidth" => 0 );
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace vencax\Highchart;
+namespace VencaX\Highchart;
 
 use Exception;
 
@@ -36,7 +36,7 @@ class Highchart extends HighchartData
         foreach ( $itemHighchartDatas as $key => $itemHighchartData )
         {
 
-            if ( is_object( $itemHighchartData ) && ( get_class( $itemHighchartData ) == "vencax\Highchart\HighchartData" ) )
+            if ( is_object( $itemHighchartData ) && ( get_class( $itemHighchartData ) == "VencaX\Highchart\HighchartData" ) )
             {
                 //is object HighchartData
                 $returnArray[$key] = $this->recurtiveItemToArray( $itemHighchartData->data );

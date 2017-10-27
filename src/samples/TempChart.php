@@ -1,6 +1,8 @@
 <?php
 
-namespace vencax\Highchart\samples;
+namespace VencaX\Highchart\samples;
+
+use VencaX;
 
 class TempChart
 {
@@ -20,7 +22,7 @@ class TempChart
             $aTempAverage[] = array( $time, (-10 + $i), ($i + 10) );
         }        
         
-        $highcharts = new \vencax\Highchart\Highchart();
+        $highcharts = new VencaX\Highchart\Highchart();
         
         $highcharts->title->text = "Graf teplot";
         $highcharts->subtitle->text = "Popis";

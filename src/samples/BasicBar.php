@@ -1,13 +1,15 @@
 <?php
 
-namespace vencax\Highchart\samples;
+namespace VencaX\Highchart\samples;
+
+use VencaX;
 
 class BasicBar
 {
 
     public static function sample()
     {
-        $highcharts = new \vencax\Highchart\Highchart();
+        $highcharts = new VencaX\Highchart\Highchart();
         $highcharts->chart->type = "bar"; //sloupcovy graf
         $highcharts->title->text = "Title Text meho grafu";
         $highcharts->subtitle->text = "Popis";

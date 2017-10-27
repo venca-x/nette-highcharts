@@ -8,14 +8,6 @@ Nette-highcharts
 
 Simple highcharts graph generator for Nette
 
-Configuration
--------------
-```
-	"require-dev": {
-		"venca-x/highcharts": "@dev"
-	}
-```
-
 Installation
 ------------
 
@@ -49,50 +41,50 @@ Usage Sample
 Presenter
 ```php
         ////////////////////////////////////////////////////////////////////////     
-        $basicColumn = new \vencax\Highchart\samples\BasicColumn();        
-        $highcharts = new \vencax\Highchart\Highchart( $basicColumn->sample() );
+        $basicColumn = new VencaX\Highchart\samples\BasicColumn();        
+        $highcharts = new VencaX\Highchart\Highchart( $basicColumn->sample() );
         $this->template->basicColumn = $highcharts->render( "basic-column" );
         ////////////////////////////////////////////////////////////////////////  
 
         ////////////////////////////////////////////////////////////////////////
-        $basicBar = new \vencax\Highchart\samples\BasicBar();
-        $highcharts = new \vencax\Highchart\Highchart( $basicBar->sample() );
+        $basicBar = new VencaX\Highchart\samples\BasicBar();
+        $highcharts = new VencaX\Highchart\Highchart( $basicBar->sample() );
         $this->template->basicBar = $highcharts->render( "basic-bar" );
         ////////////////////////////////////////////////////////////////////////
 
         ////////////////////////////////////////////////////////////////////////
-        $stackedBar = new \vencax\Highchart\samples\StackedBar();
-        $highcharts = new \vencax\Highchart\Highchart( $stackedBar->sample() );
+        $stackedBar = new VencaX\Highchart\samples\StackedBar();
+        $highcharts = new VencaX\Highchart\Highchart( $stackedBar->sample() );
         $this->template->stackedBar = $highcharts->render( "stacked-bar" );
         ////////////////////////////////////////////////////////////////////////
 
         ////////////////////////////////////////////////////////////////////////
-        $tempChart = new \vencax\Highchart\samples\TempChart();
-        $highcharts = new \vencax\Highchart\Highchart( $tempChart->sample() );
+        $tempChart = new VencaX\Highchart\samples\TempChart();
+        $highcharts = new VencaX\Highchart\Highchart( $tempChart->sample() );
         $this->template->tempChart = $highcharts->render( "temp-chart" );
         ////////////////////////////////////////////////////////////////////////        
 
         ////////////////////////////////////////////////////////////////////////
-        $trafficChart = new \vencax\Highchart\samples\TrafficChart();
-        $highcharts = new \vencax\Highchart\Highchart( $trafficChart->sample() );
+        $trafficChart = new VencaX\Highchart\samples\TrafficChart();
+        $highcharts = new VencaX\Highchart\Highchart( $trafficChart->sample() );
         $this->template->trafficChart = $highcharts->render( "traffic-chart" );
         ////////////////////////////////////////////////////////////////////////          
 
         ////////////////////////////////////////////////////////////////////////
-        $basicLine = new \vencax\Highchart\samples\BasicLine();
-        $highcharts = new \vencax\Highchart\Highchart( $basicLine->sample() );
+        $basicLine = new VencaX\Highchart\samples\BasicLine();
+        $highcharts = new VencaX\Highchart\Highchart( $basicLine->sample() );
         $this->template->basicLine = $highcharts->render( "basic-line" );
         ////////////////////////////////////////////////////////////////////////          
 
         ////////////////////////////////////////////////////////////////////////
-        $pieChart = new \vencax\Highchart\samples\PieChart();
-        $highcharts = new \vencax\Highchart\Highchart( $pieChart->sample() );
+        $pieChart = new VencaX\Highchart\samples\PieChart();
+        $highcharts = new VencaX\Highchart\Highchart( $pieChart->sample() );
         $this->template->pieChart = $highcharts->render( "pie-chart" );
         ////////////////////////////////////////////////////////////////////////  
 		
         ////////////////////////////////////////////////////////////////////////
-        $columnRotatedLabelsChart = new \vencax\Highchart\samples\ColumnRotatedLabels();
-        $highcharts = new \vencax\Highchart\Highchart( $columnRotatedLabelsChart->sample() );
+        $columnRotatedLabelsChart = new VencaX\Highchart\samples\ColumnRotatedLabels();
+        $highcharts = new VencaX\Highchart\Highchart( $columnRotatedLabelsChart->sample() );
         $this->template->columnRotatedLabelsChart = $highcharts->render( "column-rotated-labels" );
         ////////////////////////////////////////////////////////////////////////  		
 ```
