@@ -9,6 +9,12 @@ Nette-highcharts
 
 Simple highcharts graph generator for Nette
 
+
+| Version     | PHP&nbsp;&nbsp;&nbsp;     | Recommended&nbsp;Nette |
+| ---         | ---                       | ---               |
+| dev-master  | \>= 7.1                   | Nette 3.0         |
+| 1.0.x       | \>= 5.5                   | Nette 2.4, 2.3    |
+
 Installation
 ------------
 install with composer:
