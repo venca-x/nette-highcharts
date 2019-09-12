@@ -12,12 +12,14 @@ require __DIR__ . '/../bootstrap.php';
 
 class HightchartsTest extends Tester\TestCase
 {
+	/*
 	public function testOutputString()
 	{
 		$highcharts = new VencaX\Highchart\Highchart( $this->generateBasicColumnChart() );
 		$renderedGraph = $highcharts->render( "basic-column" );
 
-		Assert::contains('#basic-column', $renderedGraph);
+		Assert::contains('Highcharts.chart(\'basic-column\', {', $renderedGraph);
+		Assert::contains('\'basic-column\'', $renderedGraph);
 		Assert::contains('"type":"column"}', $renderedGraph);
 		Assert::contains('"title":{"text":"Bar chart-bar-vertically"}', $renderedGraph);
 		Assert::contains('"subtitle":{"text":"Popis"}', $renderedGraph);
@@ -25,9 +27,25 @@ class HightchartsTest extends Tester\TestCase
 		Assert::contains('{"name":"New York","data":[20]}', $renderedGraph);
 		Assert::contains('{"name":"London","data":[30]}', $renderedGraph);
 		Assert::contains('{"name":"Berlin","data":[40]}', $renderedGraph);
+	}*/
+
+	public function testOutputChart()
+	{
+		//$highcharts = new VencaX\Highchart\Highchart( VencaX\Highchart\samples\BasicBar::sample() );
+		//$highcharts = new VencaX\Highchart\Highchart( VencaX\Highchart\samples\BasicColumn::sample() );
+		//$highcharts = new VencaX\Highchart\Highchart( VencaX\Highchart\samples\BasicLine::sample() );
+		//$highcharts = new VencaX\Highchart\Highchart( VencaX\Highchart\samples\PieChart::sample() );
+		//$highcharts = new VencaX\Highchart\Highchart( VencaX\Highchart\samples\StackedBar::sample() );
+		//$highcharts = new VencaX\Highchart\Highchart( VencaX\Highchart\samples\TempChart::sample() );
+		$highcharts = new VencaX\Highchart\Highchart(VencaX\Highchart\samples\TrafficChart::sample());
+		$renderedGraph = $highcharts->render('xxx');
+
+		Assert::contains('Highcharts.chart(\'xxx\', x', $renderedGraph);
 	}
 
-	private function generateBasicColumnChart() {
+
+	private function generateBasicColumnChart()
+	{
 		$highcharts = new VencaX\Highchart\Highchart();
 		$highcharts->chart->type = 'column'; //sloupcovy graf
 		$highcharts->title->text = 'Bar chart-bar-vertically';

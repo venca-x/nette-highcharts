@@ -9,21 +9,20 @@ class TempChart
 {
 	public static function sample()
 	{
-		$aTemp = [];
-		$aTempAverage = [];
+		$averages = [];
+		$ranges = [];
 
 		$time = time();
 		for ($i = 0; $i < 30; $i++) {
 			//$time = ($time + ( 86400 * $i ) ) * 1000;
 			$time = (strtotime('29.11.2013') + (86400 * $i)) * 1000;
-			$aTemp[] = [$time, $i];
-			$aTempAverage[] = [$time, (-10 + $i), ($i + 10)];
+			$averages[] = [$time, $i];
+			$ranges[] = [$time, (-10 + $i), ($i + 10)];
 		}
 
 		$highcharts = new VencaX\Highchart\Highchart();
 
-		$highcharts->title->text = 'Graf teplot';
-		$highcharts->subtitle->text = 'Popis';
+		$highcharts->title->text = 'July temperatures';
 
 		$highcharts->xAxis->type = 'datetime';
 
@@ -34,8 +33,8 @@ class TempChart
 		$highcharts->tooltip->valueSuffix = '°C';
 
 		$highcharts->series = [
-			['name' => 'průměrná teplota venku', 'color' => 'red', 'marker' => ['symbol' => 'square', 'lineWidth' => 2], 'zIndex' => 1, 'data' => $aTemp],
-			['name' => 'Rozsah', 'type' => 'arearange', 'lineWidth' => 0, 'linkedTo' => ':previous', 'fillOpacity' => 0.3, 'zIndex' => 0, 'data' => $aTempAverage],
+			['name' => 'Temperature', 'data' => $averages, 'zIndex' => 1, 'marker' => ['fillColor' => 'white', 'lineWidth' => 2]],
+			['name' => 'Range', 'data' => $ranges, 'type' => 'arearange', 'lineWidth' => 0, 'linkedTo' => ':previous', 'fillOpacity' => 0.3, 'zIndex' => 0, 'marker' => ['enabled' => false]],
 		];
 
 		return $highcharts->getData();
