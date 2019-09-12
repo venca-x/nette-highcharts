@@ -105,8 +105,7 @@ $this->template->columnRotatedLabelsChart = $highcharts->render( "column-rotated
 {/block}
 
 {#scripts}
-    <script src="{$basePath}/js/highcharts.js"></script>
-    <script src="{$basePath}/js/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <script type="text/javascript">
         $(function () {          
             {$basicColumn|noescape}                  

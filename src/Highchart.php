@@ -8,7 +8,6 @@ use Exception;
 /**
  * Highchart generator
  * @author vEnCa-X <venca-x@seznam.cz>
- * @version 0.1
  */
 class Highchart extends HighchartData
 {
@@ -26,7 +25,7 @@ class Highchart extends HighchartData
 		$highcahrtArray = $this->recurtiveItemToArray($this->data);
 
 		//return JS for highchart
-		return "$('#{$renderToID}').highcharts(" . json_encode($highcahrtArray) . ');';
+		return "Highcharts.chart('{$renderToID}', " . json_encode($highcahrtArray) . ');';
 	}
 
 
